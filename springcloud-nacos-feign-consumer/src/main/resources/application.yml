@@ -1,0 +1,39 @@
+server:
+  port: 8862
+#dubbo:
+#  # 配置服务信息
+#  application:
+#    name: dubbo-consumer
+#    # 禁用QOS同一台机器可能会有端口冲突现象
+#    qos-enable: false
+#    qos-accept-foreign-ip: false
+#  # 配置注册中心
+#  registry:
+#    address: nacos://127.0.0.1:8848
+#  # 设置超时时间
+#  consumer:
+#    timeout: 4000
+#  protocol:
+#    name: dubbo
+#    port: 20881
+spring:
+  main:
+    # 解决Bean重复定义问题
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        service: con
+
+
+#nacos:
+#  config:
+##    data-id: testid # nacos 配置的 data-id
+#    server-addr: 127.0.0.1:8848 # nacos 服务器地址
+##    group: DEFAULT_GROUP # 配置文件 Group
+#    namespace: 08f381b2-1cb3-4b9a-8c87-d4e51e296945 # 命名空间ID
+#    type: properties # nacos 配置文件类型
+#    auto-refresh: true # 是否启用动态刷新配置
+#    bootstrap:
+#      enable: true

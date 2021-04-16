@@ -1,0 +1,10 @@
+server:
+  port: 8861
+spring:
+  main:
+    # 解决Bean重复定义问题
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
